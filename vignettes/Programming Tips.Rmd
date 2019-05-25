@@ -1,0 +1,31 @@
+---
+title: "Vignette Title"
+author: "Vignette Author"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Debugging  
+
+## Using Browser
+
+David taught me to use conditional print statements to stop the code at a particular iteration and print some output. A better way of doing this is using the `browser()` which can trigger when the `expr` is equal to `TRUE`. In the following example the loop will pause at iteration 556 and allow you to interactively debugging. 
+
+```{r}
+for (i in 1:1000) {
+  browser(expr = (i==556))
+}
+```
+
+
