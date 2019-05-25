@@ -1,0 +1,11 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.o
+.DS_Store
+*.Rproj
+*.so
+*.o-*
+*.dat
+*.rds
