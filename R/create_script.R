@@ -21,7 +21,8 @@ create_script <- function(filename,title=NULL) {
   cat(sprintf("# Filename: %s\n",filename),file = filename,append = TRUE)
   cat("# Written by: Isaac Michaud\n",file = filename,append = TRUE)
   cat(sprintf("# Created: %s\n",date),file = filename,append = TRUE)
-  cat(sprintf("# Edited: %s\n",date),file = filename,append = TRUE)
+  cat(sprintf("# Edited on: %s\n",date),file = filename,append = TRUE)
   cat("# Description:\n",file = filename,append = TRUE)
+  cat("\n",file = filename,append = TRUE)
+  cat("rm(list=ls())",file = filename,append = TRUE)
 }
-
